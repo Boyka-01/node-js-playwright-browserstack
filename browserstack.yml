@@ -5,10 +5,53 @@ platforms:
     osVersion: 11
     browserName: chrome
     browserVersion: latest
+
   - os: OS X
     osVersion: Ventura
     browserName: playwright-webkit
     browserVersion: latest
+
   - deviceName: Samsung Galaxy S23 Ultra
     browserName: chrome
     osVersion: 13.0
+
+  - os: Windows
+    osVersion: 10
+    browserName: firefox
+    browserVersion: latest
+
+  - os: Ubuntu
+    osVersion: 20.04
+    browserName: firefox
+    browserVersion: latest
+
+  - os: OS X
+    osVersion: Monterey
+    browserName: firefox
+    browserVersion: latest
+
+  - deviceName: iPhone 14 Pro
+    browserName: safari
+    osVersion: latest
+
+  - deviceName: iPad Pro (11-inch)
+    browserName: safari
+    osVersion: latest
+
+  - deviceName: Google Pixel 7
+    browserName: chrome
+    osVersion: 13.0
+
+  - deviceName: Samsung Galaxy Tab S8
+    browserName: chrome
+    osVersion: 13.0
+
+  - os: Windows
+    osVersion: 11
+    browserName: edge
+    browserVersion: latest
+
+  - os: Linux
+    osVersion: latest
+    browserName: chromium
+    browserVersion: latest

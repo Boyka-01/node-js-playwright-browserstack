@@ -2,6 +2,7 @@
 const config = {
   testDir: './tests',
   testMatch: '**/bstack_test*.js',
+  
 
   /* Maximum time one test can run for. */
   timeout: 90 * 1000,
@@ -29,3 +30,10 @@ const config = {
 };
 
 module.exports = config;
+// playwright.config.js
+const { defineConfig } = require('@playwright/test');
+
+module.exports = defineConfig({
+  reporter: [['html', { outputFolder: 'playwright-report', open: 'never' }]],
+  // Other configurations (if needed)
+});
