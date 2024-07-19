@@ -1,3 +1,6 @@
+
+userName: ammaratariq3
+accessKey: pxpD5AzFkbpqLxfTjLrj
 platforms:
   - os: Windows
     osVersion: 11
@@ -43,11 +46,6 @@ platforms:
   - deviceName: Samsung Galaxy Tab S8
     browserName: chrome
     osVersion: 13.0
-
-  - os: Windows
-    osVersion: 11
-    browserName: edge
-    browserVersion: latest
 
   - os: Linux
     osVersion: latest
