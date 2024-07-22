@@ -1,11 +1,10 @@
 const { devices } = require('@playwright/test');
-BROWSERSTACK_USERNAME=ammaratariq3,
-BROWSERSTACK_ACCESS_KEY=pxpD5AzFkbpqLxfTjLrj
+
 module.exports = {
   use: {
     browserName: 'chromium',
     baseURL: 'https://example.com',
-    headless: true,
+    headless: false,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
