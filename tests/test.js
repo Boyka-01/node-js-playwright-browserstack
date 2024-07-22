@@ -1,4 +1,6 @@
-const { test, expect } = require('@playwright/tests');
+const playwrightConfig = require("../playwright.config");
+
+const { test, expect } = require('@playwright/tests',playwrightConfig);
 
 describe('Sample Test Suite', () => {
 
