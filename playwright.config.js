@@ -1,10 +1,11 @@
 const { devices } = require('@playwright/test');
 
 module.exports = {
-    testDir: '.test',
+    testDir: '.tests',
   use: {
     browserName: 'chromium',
     headless: false,
+    fullyParallel: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
