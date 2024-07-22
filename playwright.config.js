@@ -1,9 +1,6 @@
-const config = {
-  testDir: './tests',
-  testMatch: '**/bstack_local*.js',}
-
 const { devices } = require('@playwright/test');
-
+BROWSERSTACK_USERNAME=ammaratariq3,
+BROWSERSTACK_ACCESS_KEY=pxpD5AzFkbpqLxfTjLrj
 module.exports = {
   use: {
     browserName: 'chromium',
@@ -17,8 +14,8 @@ module.exports = {
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
     },
     browserstack: {
-      username:ammaratariq3,
-      accessKey:pxpD5AzFkbpqLxfTjLrj,
+      username: process.env.BROWSERSTACK_USERNAME,
+      accessKey: process.env.BROWSERSTACK_ACCESS_KEY,
     },
   },
   projects: [
