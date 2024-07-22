@@ -6,7 +6,7 @@ module.exports = {
   testDir: './tests',
   timeout: 60000,
   use: {
-    headless: true,
+    headless: false,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
