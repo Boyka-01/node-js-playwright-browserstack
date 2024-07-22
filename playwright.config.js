@@ -1,9 +1,9 @@
 const { devices } = require('@playwright/test');
 
 module.exports = {
+    testDir: '.test',
   use: {
     browserName: 'chromium',
-    baseURL: 'https://example.com',
     headless: false,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
