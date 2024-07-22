@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/tests');
 
 describe('Sample Test Suite', () => {
 
-    test('should navigate and fill the form correctly', async ({ page }) => {
+    it('should navigate and fill the form correctly', async ({ page }) => {
         await page.goto('https://opticommneud01stvnjnsapp.azurewebsites.net/');
 
         // Log cookies
