@@ -1,6 +1,4 @@
-const { test, expect } = require('@playwright/test');
-const chai = require('chai');
-const { expect: chaiExpect } = chai; // Importing expect from chai
+const { test, expect } = require('@playwright/tests');
 
 describe('Sample Test Suite', () => {
 
