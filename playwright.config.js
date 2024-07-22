@@ -17,8 +17,8 @@ module.exports = {
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
     },
     browserstack: {
-      username: process.env.BROWSERSTACK_USERNAME,
-      accessKey: process.env.BROWSERSTACK_ACCESS_KEY,
+      username:ammaratariq3,
+      accessKey:pxpD5AzFkbpqLxfTjLrj,
     },
   },
   projects: [
