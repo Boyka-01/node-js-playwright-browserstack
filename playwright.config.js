@@ -1,34 +1,25 @@
 const { devices } = require('@playwright/test');
 
 module.exports = {
-    testDir: '.tests',
+  testDir: './tests', // Directory where your test files are located
   use: {
     browserName: 'chromium',
-    headless: false,
-    fullyParallel: true,
+    headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
-    ignoreHTTPSErrors: true,
-    launchOptions: {
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    },
-    browserstack: {
-      username: process.env.BROWSERSTACK_USERNAME,
-      accessKey: process.env.BROWSERSTACK_ACCESS_KEY,
-    },
   },
   projects: [
     {
-      name: 'chrome',
+      name: 'Desktop Chrome',
       use: { ...devices['Desktop Chrome'] },
     },
     {
-      name: 'firefox',
+      name: 'Desktop Firefox',
       use: { ...devices['Desktop Firefox'] },
     },
     {
-      name: 'webkit',
+      name: 'Desktop Safari',
       use: { ...devices['Desktop Safari'] },
     },
   ],

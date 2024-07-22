@@ -1,7 +1,5 @@
 const playwrightConfig = require("../playwright.config");
 
-const { test, expect } = require('@playwright/tests',playwrightConfig);
-
 describe('Sample Test Suite', () => {
 
     it('should navigate and fill the form correctly', async ({ page }) => {
