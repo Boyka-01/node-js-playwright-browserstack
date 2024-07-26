@@ -1,28 +1,79 @@
-// playwright.config.js
-
 const { devices } = require('@playwright/test');
 
 module.exports = {
-  testDir: './tests',
-  timeout: 60000,
   use: {
-    headless: false,
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
     trace: 'on-first-retry',
+    headless: false,
+    //screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+    ignoreHTTPSErrors: true,
+    launchOptions: {
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    },
   },
   projects: [
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      name: 'Chrome on Windows ',
+      use: {
+        browserName: 'chromium',
+        ...devices['Desktop Chrome'],
+        viewport: { width: 1920, height: 1080 },
+        deviceScaleFactor: 1, 
+        metadata: {
+          browser: 'Chrome',
+          browser_version: 'latest',
+          os: 'Windows',
+          os_version: '11',
+        },
+      },
     },
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: 'Firefox on Windows ',
+      use: {
+        browserName: 'firefox',
+        ...devices['Desktop Firefox'],
+        viewport: { width: 1660, height: 1080 },
+        deviceScaleFactor: 0.5, 
+        metadata: {
+          browser: 'Firefox',
+          browser_version: 'latest',
+          os: 'Windows',
+          os_version: '11',
+        },
+      },
     },
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'Safari on macOS Big Sur',
+      use: {
+        browserName: 'webkit',
+        ...devices['Desktop Safari'],
+        viewport: { width: 1440, height: 1080 },
+        // BrowserStack capabilities
+        metadata: {
+          browser: 'Safari',
+          browser_version: 'latest',
+          os: 'OS X',
+          os_version: 'Big Sur',
+        },
+      },
+    },
+    {
+      name: 'Edge on Windows ',
+      use: {
+        browserName: 'firefox',
+        ...devices['Desktop Edge'],
+        viewport: { width: 1280, height: 720 },
+        // BrowserStack capabilities
+        metadata: {
+          browser: 'Edge',
+          browser_version: 'latest',
+          os: 'Windows',
+          os_version: '11',
+        },
+      },
     },
   ],
 };
+
+
+
