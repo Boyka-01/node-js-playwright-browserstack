@@ -12,11 +12,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.45.2",
+    "@playwright/test": "^1.45.3",
     "browserstack-node-sdk": "latest"
   },
   "dependencies": {
     "browserstack-local": "^1.5.5",
-    "chai": "^5.1.1"
+    "chai": "^5.1.1",
+    "js-yaml": "^4.1.0"
   }
 }

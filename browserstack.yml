@@ -1,57 +1,77 @@
+# userName: ammaratariq3
+# accessKey: pxpD5AzFkbpqLxfTjLrj
+
+# platforms:
+#   # Windows configurations
+#   - os: Windows
+#     osVersion: 11
+#     browserName: chrome
+#     browserVersion: latest
+
+#   - os: Windows
+#     osVersion: 10
+#     browserName: firefox
+#     browserVersion: latest
+
+#   - os: Windows
+#     osVersion: 10
+#     browserName: edge
+#     browserVersion: latest
+
+#   # macOS configurations
+#   - os: OS X
+#     osVersion: Ventura
+#     browserName: playwright-webkit
+#     browserVersion: latest
+
+#   - os: OS X
+#     osVersion: Big Sur
+#     browserName: chrome
+#     browserVersion: latest
+
+#   - os: OS X
+#     osVersion: Catalina
+#     browserName: safari
+#     browserVersion: latest
+
+#   # Mobile configurations
+#   - deviceName: Samsung Galaxy S23 Ultra
+#     browserName: chrome
+#     osVersion: 13.0
+
+#   - deviceName: iPhone 14 Pro
+#     browserName: safari
+#     osVersion: 16
+
+#   - deviceName: Google Pixel 7
+#     browserName: chrome
+#     osVersion: 13
+
+#   # Tablet configurations
+#   - deviceName: iPad Pro 12.9 2021
+#     browserName: safari
+#     osVersion: 15
+
+#   - deviceName: Samsung Galaxy Tab S8
+#     browserName: chrome
+#     osVersion: 12
+
+common:
 userName: ammaratariq3
 accessKey: pxpD5AzFkbpqLxfTjLrj
+  buildName: "Playwright BrowserStack Build"
+  projectName: "Playwright Test"
+  server: "hub-cloud.browserstack.com"
 
-platforms:
-  # Windows configurations
-  - os: Windows
-    osVersion: 11
-    browserName: chrome
-    browserVersion: latest
+environments:
+  - device: "iPhone 14 Pro"
+    os_version: "16"
+    browserName: "safari"
+    realMobile: true
+    name: "iPhone 14 Pro Test"
 
-  - os: Windows
-    osVersion: 10
-    browserName: firefox
-    browserVersion: latest
-
-  - os: Windows
-    osVersion: 10
-    browserName: edge
-    browserVersion: latest
-
-  # macOS configurations
-  - os: OS X
-    osVersion: Ventura
-    browserName: playwright-webkit
-    browserVersion: latest
-
-  - os: OS X
-    osVersion: Big Sur
-    browserName: chrome
-    browserVersion: latest
-
-  - os: OS X
-    osVersion: Catalina
-    browserName: safari
-    browserVersion: latest
-
-  # Mobile configurations
-  - deviceName: Samsung Galaxy S23 Ultra
-    browserName: chrome
-    osVersion: 13.0
-
-  - deviceName: iPhone 14 Pro
-    browserName: safari
-    osVersion: 16
-
-  - deviceName: Google Pixel 7
-    browserName: chrome
-    osVersion: 13
-
-  # Tablet configurations
-  - deviceName: iPad Pro 12.9 2021
-    browserName: safari
-    osVersion: 15
-
-  - deviceName: Samsung Galaxy Tab S8
-    browserName: chrome
-    osVersion: 12
+  - device: "Google Pixel 7"
+    os_version: "13"
+    browserName: "chrome"
+    realMobile: true
+    name: "Google Pixel 7 Test"

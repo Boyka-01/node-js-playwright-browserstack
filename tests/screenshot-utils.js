@@ -32,7 +32,7 @@ const ensureScreenshotsDirExists = (dir) => {
  */
 const saveScreenshot = async (page, step, screenshotsDir) => {
     const screenshotPath = path.join(screenshotsDir, `${step}.png`);
-    await page.screenshot({ path: screenshotPath, fullPage: true }); 
+    await page.screenshot({ path: screenshotPath, fullPage: true });
 };
 
 module.exports = {
